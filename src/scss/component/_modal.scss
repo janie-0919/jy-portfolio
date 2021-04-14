@@ -1,0 +1,108 @@
+@import "variables";
+.modal {
+  .modal-dialog {
+    max-width: 700px;
+    min-width: 700px;
+
+    .modal-content {
+      width: 700px;
+      box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+      border-radius: 10px;
+      border: 0;
+
+      .modal-header {
+        position: relative;
+        display: flex;
+        height: 56px;
+        padding: 0 0 0 20px;
+        border-radius: 10px 10px 0 0;
+        align-items: center;
+        background-color: $primary;
+
+        .modal-title {
+          font-size: 19px;
+          line-height: 54px;
+          letter-spacing: -.48px;
+          color: #fff;
+          font-weight: bold;
+        }
+        .btn-close {
+          position: absolute;
+          display: inline-block;
+          width: 22px;
+          height: 22px;
+          background-image: url(../img/common/btn-popup-close.png);
+          background-size: cover;
+          right: 20px;
+          top: 17px;
+        }
+      }
+      .modal-body {
+        padding: 40px;
+        > .text {
+          font-family: $font-medium;
+          font-size: 26px;
+          font-weight: 500;
+          line-height: 38px;
+          letter-spacing: -0.65px;
+          margin-bottom: 31px;
+        }
+        textarea.form-control {
+          height: 266px;
+        }
+        .vertical-table {
+          tr.fixed-height {
+            height: 200px;
+          }
+          .scroll {
+            overflow-y: scroll;
+            .text {
+              height: 170px;
+              line-height: 24px;
+            }
+          }
+        }
+
+        .box-table {
+          margin-top: 0;
+          margin-bottom: 0;
+          border-top: 1px solid $primary;
+
+          .inner {
+            padding: 20px;
+
+            &.scroll {
+              overflow-y: scroll;
+              height: 200px;
+            }
+          }
+
+          .title-area {
+            background-color: #faf7ff;
+            border-bottom: 0;
+
+            .icon {
+              margin-right: 6px;
+            }
+          }
+        }
+      }
+      .modal-footer {
+        border-top: 0;
+        padding: 0 0 40px;
+        justify-content: center;
+
+        .btn {
+          margin: 0 20px 0 0;
+
+          &:only-child {
+            margin: 0;
+          }
+          &:last-child {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}

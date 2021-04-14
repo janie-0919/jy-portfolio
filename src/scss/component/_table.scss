@@ -1,0 +1,123 @@
+@import "src/scss/component/variables";
+
+.table {
+  width: 100%;
+  &.mb-status {
+    margin-bottom: 238px;
+  }
+  thead {
+    tr {
+      th {
+        text-align: center;
+        background: #f7f8fc;
+        border-top: 1px solid $text-01;
+        border-bottom: 1px solid #e3e4e8;
+        padding: 15px 0;
+        font-size: 16px;
+        color: $text-01;
+        letter-spacing: -.4px;
+      }
+    }
+  }
+  tbody {
+    border-bottom: 1px solid $text-04;
+    tr {
+      td {
+        position: relative;
+        text-align: center;
+        height: 54px;
+        padding: 14px 15px;
+        font-size: 16px;
+        color: $text-01;
+        letter-spacing: -.4px;
+        vertical-align: middle;
+
+        .btn {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+        }
+
+        .text-small {
+          position: absolute;
+          font-family: $font-medium;
+          font-size: 11px;
+          font-weight: 500;
+          line-height: 17px;
+          letter-spacing: -0.28px;
+          color: $primary;
+          left: 20px;
+          top: 5px;
+        }
+
+        span {
+          overflow: hidden;
+          display: inline-block;
+          line-height: 24px;
+          vertical-align: middle;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          max-width: 215px;
+        }
+
+        &.completed {
+          color: #6291d0;
+        }
+      }
+    }
+  }
+}
+
+.vertical-table {
+  width: 100%;
+  border-top: 1px solid $text-01;
+  border-bottom: 1px solid $text-04;
+  tr {
+    border-bottom: 1px solid #e3e4e8;
+    &:last-child {
+      border-bottom: 0;
+    }
+    &.fixed-height {
+      height: 150px;
+      td {
+        vertical-align: top;
+      }
+    }
+    td {
+      height: 54px;
+      padding-left: 24px;
+      vertical-align: middle;
+
+      .icon {
+        margin-right: 10px;
+      }
+
+      .text {
+        display: inline-block;
+        font-size: 16px;
+        vertical-align: middle;
+      }
+
+      .ico-arrow-step {
+        margin-left: 13px;
+        margin-right: 10px;
+      }
+
+      &:first-child {
+        background-color: #f5f6f8;
+        .text {
+          font-family: $font-medium;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
