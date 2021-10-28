@@ -57,6 +57,8 @@ function copyCSS() {
 function jsLib() {
     let sourceLib = [
         'src/js/lib/jquery.js',
+        'src/js/lib/gsap.js',
+        'src/js/lib/ScrollTrigger.js',
     ];
     return gulp.src(sourceLib)
         .pipe(concat('bundle.js'))
