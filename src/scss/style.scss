@@ -1,20 +1,15 @@
+// init
+@import "component/normalize";
 @import "component/variables";
-@import "lib/bootstrap-datepicker3";
-@import "../../node_modules/bootstrap/scss/bootstrap";
 
-@import "component/reboot";
+// fonts
 @import "fonts/NotoSansCJK";
-@import "layout/layout";
 
-@import "component/pagination";
+// components
+@import "component/layout";
 @import "component/btn";
-@import "component/table";
-@import "component/checkbox";
 @import "component/input";
-@import "component/step";
-@import "component/tab";
-@import "component/radio";
-@import "component/common";
 @import "component/modal";
 
+// pages
 @import "pages/pages";
