@@ -59,6 +59,7 @@ function jsLib() {
         'src/js/lib/jquery.js',
         'src/js/lib/gsap.js',
         'src/js/lib/ScrollTrigger.js',
+        'src/js/lib/anime.min.js',
     ];
     return gulp.src(sourceLib)
         .pipe(concat('bundle.js'))
