@@ -1,9 +1,12 @@
 // init
 @import "component/normalize";
 @import "component/variables";
+@import "component/common";
 
 // fonts
 @import "fonts/NotoSansCJK";
+@import "fonts/TTCommons";
+@import "fonts/fontAwesome";
 
 // components
 @import "component/layout";

@@ -1,28 +1,39 @@
 @font-face {
   font-family: 'Noto Sans CJK KR Regular';
   font-style: 400;
-  src: local('Noto Sans CJK KR Regular'), url('../fonts/NotoSansCJK/NotoSansCJKkr-Regular.woff') format('woff'),
+  src: local('Noto Sans CJK KR Regular'),
+  url('../fonts/NotoSansCJK/NotoSansCJKkr-Regular.woff') format('woff'),
   url('../fonts/NotoSansCJK/NotoSansCJKkr-Regular.eot') format('embedded-opentype');
   font-weight: normal;
+  unicode-range: U+AC00-D7A3, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E;
 }
+
 @font-face {
   font-family: 'Noto Sans CJK KR Medium';
   font-style: normal;
   font-weight: 500;
-  src: local('Noto Sans CJK KR Medium'), url('../fonts/NotoSansCJK/NotoSansCJKkr-Medium.woff') format('woff'),
-  url('../fonts/NotoSansCJK/NotoSansCJKkr-Medium.eot')  format('embedded-opentype');
+  src: local('Noto Sans CJK KR Medium'),
+  url('../fonts/NotoSansCJK/NotoSansCJKkr-Medium.woff') format('woff'),
+  url('../fonts/NotoSansCJK/NotoSansCJKkr-Medium.eot') format('embedded-opentype');
+  unicode-range: U+AC00-D7A3, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E;
 }
+
 @font-face {
   font-family: 'Noto Sans CJK KR Bold';
   font-style: normal;
   font-weight: 900;
-  src: local('Noto Sans CJK KR Bold'), url('../fonts/NotoSansCJK/NotoSansCJKkr-Bold.woff') format('woff'),
-  url('../fonts/NotoSansCJK/NotoSansCJKkr-Bold.eot')  format('embedded-opentype');
+  src: local('Noto Sans CJK KR Bold'),
+  url('../fonts/NotoSansCJK/NotoSansCJKkr-Bold.woff') format('woff'),
+  url('../fonts/NotoSansCJK/NotoSansCJKkr-Bold.eot') format('embedded-opentype');
+  unicode-range: U+AC00-D7A3, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E;
 }
+
 @font-face {
   font-family: 'Noto Sans KR Light';
   font-style: normal;
   font-weight: 300;
-  src: local('Noto Sans CJK KR Bold'), url('../fonts/NotoSansCJK/NotoSansCJKkr-Light.woff') format('woff'),
-  url('../fonts/NotoSansCJK/NotoSansCJKkr-Light.eot')  format('embedded-opentype');
+  src: local('Noto Sans CJK KR Bold'),
+  url('../fonts/NotoSansCJK/NotoSansCJKkr-Light.woff') format('woff'),
+  url('../fonts/NotoSansCJK/NotoSansCJKkr-Light.eot') format('embedded-opentype');
+  unicode-range: U+AC00-D7A3, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E;
 }
