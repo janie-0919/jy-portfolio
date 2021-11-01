@@ -2,6 +2,7 @@
 @import "component/normalize";
 @import "component/variables";
 @import "component/common";
+@import "component/config";
 
 // fonts
 @import "fonts/NotoSansCJK";
@@ -12,7 +13,7 @@
 @import "component/layout";
 @import "component/btn";
 @import "component/input";
-@import "component/modal";
+@import "component/popup";
 
 // pages
 @import "pages/pages";

@@ -1,0 +1,24 @@
+@import "variables";
+
+.popup {
+  position: fixed;
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) scale(0.9);
+  visibility: hidden;
+  opacity: 0;
+  transition: all .3s;
+  background-color: $white;
+  z-index: 10;
+
+  &.open {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50% , -50%) scale(1);
+  }
+}
+.scrollOff {
+  overflow-y: hidden !important;
+}
