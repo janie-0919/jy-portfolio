@@ -54,6 +54,11 @@ function copyCSS() {
         .pipe(gulp.dest('dist/css'));
 }
 
+function copyFavicon() {
+    return gulp.src('favicon.ico')
+        .pipe(gulp.dest('dist/'));
+}
+
 function jsLib() {
     let sourceLib = [
         'src/js/lib/jquery.js',
@@ -130,7 +135,7 @@ function setEnvDevelope(cb) {
 
 
 //task
-gulp.task("dev", gulp.series(setEnvDevelope, delDist, scss, copyIndex, copyImg, copyFavicon, copyFonts, copyCSS, htmlPage, delInclude, jsCommon, jsLib));
+gulp.task("dev", gulp.series(setEnvDevelope, delDist, scss, copyIndex, copyImg, copyFavicon, copyFonts, copyCSS, htmlPage, delInclude, jsCommon, jsLib, copyFavicon));
 gulp.task("dist", gulp.series(setEnvProduct, delDist, copyCss, copyImg, copyFonts, copyCSS, htmlPage, delInclude, beautify));
 gulp.task("watch", gulp.parallel(watchScss, watchHtml, watchInclude, watchImg, watchJs, watchFont, watchIndex));
 

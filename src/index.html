@@ -13,14 +13,14 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="이주연 포트폴리오" />
     <meta property="og:description" content="이주연 퍼블리싱 포트폴리오" />
-    <meta property="og:image" content="dist/img/og-image.png" />
+    <meta property="og:image" content="img/og-image.png" />
     <link rel="shortcut icon" href="favicon.ico">
-    <link type="text/css" rel="stylesheet" href="dist/css/style.css"/>
-    <script src="dist/js/bundle.js"></script>
-    <script src="dist/js/common.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+    <script src="js/bundle.js"></script>
+    <script src="js/common.js"></script>
     <title>이주연 포트폴리오</title>
 </head>
-<body class="scrollOn">
+<body class="scrollOff">
 <div class="pagination-wrap">
     <ul>
         <li><span class="sr-only">1</span></li>
@@ -319,22 +319,34 @@
     </section>
     <!-- e ? -->
 </div>
-<div class="popup" id="popup">
+<div class="popup open" id="popup">
     <div class="content">
-        <a href="#">닫기</a>
+        <a href="#" class="btn-close"><span class="left"></span><span class="right"></span><span class="close">close</span></a>
         <div class="box">
-            테스트
+            <div class="row">
+                <div class="col">1</div>
+                <div class="col">
+                    <div class="description">
+                        <div class="inner">
+                            <div class="title"><span>Pablo</span></div>
+                            <div class="desc">i-Scream in app</div>
+                            <div class="bar-wrap"><span class="bar"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 <script>
-    // $('.work-list a').on('click', function (){
-    //     $('body').addClass('scrollOff');
-    // })
-    //
-    // $('#').on('click', function (){
-    //     $('body').addClass('scrollOff');
-    // })
+    $('.work-list a').on('click', function (){
+        $('body').addClass('scrollOff');
+    })
+
+    $('.btn-close').on('click', function (){
+        $('body').addClass('scrollOff');
+        $('.popup').removeClass('open')
+    })
 
     anime({
         targets: "#bubble-1 path",
@@ -426,7 +438,7 @@
                 start:"top top",
                 end:"bottom bottom",
                 markers: false,
-                onEnter: self => console.log(self.isActive),
+                // onEnter: self => console.log(self.isActive),
                 onUpdate(self) {
                     // let progress = self.progress;
                     // progress.toFixed(3);
