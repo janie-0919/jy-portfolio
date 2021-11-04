@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'TT Commons';
+  src: local('GongGothicMedium'),
+  url('../fonts/esamanra/esamanru-medium.ttf') format('truetype'),
+  url('../fonts/esamanra/esamanru-medium.woff') format('woff');
+  font-weight: normal;
+  unicode-range: U+AC00-D7A3;
+}
+
+@font-face {
+  font-family: 'TT Commons';
+  src: local('GongGothicMedium'),
+  url('../fonts/esamanra/esamanru-bold.ttf') format('truetype'),
+  url('../fonts/esamanra/GongGothicBold.woff') format('woff');
+  font-weight: bold;
+  unicode-range: U+AC00-D7A3;
+}
+
+@font-face {
+  font-family: 'TT Commons';
+  src: local('GongGothicMedium'),
+  url('../fonts/esamanra/esamanru-light.ttf') format('truetype'),
+  url('../fonts/esamanra/GongGothicLight.woff') format('woff');
+  font-weight: normal;
+  unicode-range: U+AC00-D7A3;
+}
