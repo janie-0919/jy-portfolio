@@ -4,8 +4,10 @@
 @import "component/common";
 @import "component/config";
 
+// library
+@import "lib/jquery.magnify";
+
 // fonts
-//@import "fonts/NotoSansCJK";
 @import "fonts/esamanru";
 @import "fonts/TTCommons";
 @import "fonts/fontAwesome";
@@ -15,6 +17,7 @@
 @import "component/btn";
 @import "component/input";
 @import "component/popup";
+
 
 // pages
 @import "pages/pages";
