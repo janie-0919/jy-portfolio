@@ -10,7 +10,7 @@
   visibility: hidden;
   opacity: 0;
   transition: all .3s;
-  background-color: #efefe6;
+  background-color: #F1F0EE;
   z-index: 150;
 
   .btn-close {
@@ -93,7 +93,7 @@
                 padding: 50px 20px;
 
                 .title {
-                  font-size: 28px;
+                  font-size: 32px;
                   font-weight: 900;
                   line-height: 34px;
                   margin-bottom: 15px;
@@ -116,7 +116,8 @@
                   &::before {
                     content: '기여도';
                     position: absolute;
-                    font-size: 12px;
+                    font-size: 14px;
+                    height: 20px;
                     top: -25px;
                     left: 0;
                   }
@@ -149,4 +150,12 @@
 .scrollOff {
   position: relative;
   overflow-y: hidden !important;
+}
+
+.magnify-modal {
+  background-color: $orange;
+}
+
+.magnify-stage {
+  border: 0;
 }

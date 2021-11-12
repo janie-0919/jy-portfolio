@@ -1,12 +1,40 @@
 @import '../component/variables';
+html {
+  overflow: visible !important;
+}
 // PC
-section {
+//section {
+//  width: 100%;
+//  height: 100%;
+//  position: relative;
+//  display: flex;
+//  justify-content: center;
+//  align-items: center;
+//}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-normal {
+  font-style: normal;
+  font-weight: 400;
+}
+
+#wrap {
+  display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
+  flex-wrap: nowrap;
+}
+
+section {
+  display: block;
+  width: 100%;
+  height: 100vh;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: initial;
+  align-items: initial;
 }
 
 .main {
@@ -119,9 +147,13 @@ section {
 }
 
 .profile {
-  background: linear-gradient($primary 50%, transparent 50%);
+  display: flex;
+  align-items: center;
+  background: linear-gradient($green 50%, transparent 50%);
 
   .inner {
+    display: flex;
+    align-items: center;
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
@@ -133,6 +165,7 @@ section {
       margin-bottom: 20px;
       color: $white;
     }
+
     .card-wrap {
       display: flex;
       width: 100%;
@@ -145,15 +178,10 @@ section {
 
         &:nth-child(3) {
           .card-inner {
-            .card-header {
-              .title {
-                font-size: 18px;
-              }
-            }
-
             .text-item-list {
               li {
                 font-size: 18px;
+                font-weight: 500;
               }
             }
           }
@@ -211,6 +239,7 @@ section {
                     display: block;
                     margin-bottom: 40px;
                     font-size: 18px;
+                    font-weight: 500;
                     line-height: 30px;
                     text-transform: uppercase;
                     letter-spacing: -.4px;
@@ -234,7 +263,7 @@ section {
                 font-size: 16px;
                 line-height: 30px;
                 padding-left: 20px;
-                margin-bottom: 10px;
+                margin-bottom: 15px;
                 text-transform: uppercase;
 
                 &:last-child {
@@ -262,13 +291,14 @@ section {
 }
 
 .career {
+  height: 100%;
+
   .inner {
     display: flex;
-    width: 100%;
     height: 100%;
     max-width: 1280px;
     margin: 0 auto;
-    padding: 0 10%;
+    padding: 10%;
     align-items: flex-start;
 
     .year-info {
@@ -300,15 +330,16 @@ section {
         .item {
           position: relative;
           display: flex;
+          flex-direction: column;
           width: 100%;
           border-bottom: 2px solid $text;
 
-          a {
+          .item-header {
             display: flex;
             width: 100%;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 10px 21px;
+            padding: 20px 0 21px;
             color: $text;
             text-decoration: none;
 
@@ -317,22 +348,94 @@ section {
             }
 
             .title {
-              width: calc(100% - 140px);
+              display: block;
+              width: calc(100% - 155px);
               font-size: 20px;
+              line-height: 30px;
               font-weight: bold;
+              word-break: keep-all;
             }
 
             .year {
-              width: 140px;
+              display: block;
+              width: 155px;
               font-size: 18px;
-              font-weight: 500;
+              font-weight: bold;
               text-align: right;
             }
+
             &:hover {
               .title {
-                transform: translateX(10px);
                 color: $primary;
                 transition: .3s;
+              }
+            }
+          }
+
+          .item-body {
+            display: none;
+            border-top: 2px solid $text;
+            padding: 20px 0;
+
+            .text {
+              font-size: 16px;
+              font-weight: normal;
+              line-height: 24px;
+              margin-bottom: 10px;
+
+              &::before {
+                content: '- ';
+              }
+            }
+
+            .badge-wrap {
+              padding-left: 10px;
+              margin-bottom: 20px;
+
+              .badge {
+                display: inline-block;
+                font-size: 15px;
+                font-weight: 600;
+                color: white;
+                border-radius: 5px;
+                padding: 5px;
+                text-transform: uppercase;
+                animation-duration: 4s;
+
+                + .badge {
+                  margin-left: 5px;
+                }
+
+                &.html {
+                  background-color: $orange;
+                }
+
+                &.css {
+                  background-color: $blue;
+                }
+
+                &.js {
+                  background-color: #F6C61B;
+                }
+
+                &.vue {
+                  background-color: $green;
+                }
+
+                &.react {
+                  background-color: $skyblue;
+                }
+              }
+            }
+
+            .img-container {
+              img {
+                display: inline-block;
+                width: auto;
+                height: auto;
+                max-width: 300px;
+                max-height: 300px;
+                margin-right: 10px;
               }
             }
           }
@@ -414,10 +517,12 @@ section {
                 top: -50px;
                 right: -60px;
               }
+
               &:nth-of-type(2) {
                 bottom: -150px;
                 left: -130px;
               }
+
               &:nth-of-type(3) {
                 bottom: -50px;
                 right: -30px;
@@ -430,7 +535,7 @@ section {
   }
 
   .profile {
-    background: rgba(186, 207, 198,.5);
+    background: rgba(186, 207, 198, .5);
 
     .inner {
       width: 100%;
@@ -538,7 +643,7 @@ section {
           width: 100%;
 
           .item {
-            a {
+            .item-header {
               padding: 7px 5px 15px;
 
               &:hover {
@@ -575,7 +680,12 @@ section {
     }
 
     &:nth-child(2n+2) {
-      background: rgba(186, 207, 198,.5);
+      background: rgba(186, 207, 198, .5);
     }
   }
+}
+
+@keyframes barAnimation {
+  0% { opacity: 0; color: transparent }
+  100% { opacity: 1; color: white }
 }

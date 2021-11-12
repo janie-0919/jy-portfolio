@@ -39,6 +39,11 @@ function copyImg() {
         .pipe(gulp.dest('dist/img'));
 }
 
+// function copyVideo() {
+//     return gulp.src('src/video/**')
+//         .pipe(gulp.dest('dist/video'));
+// }
+
 function copyFavicon() {
     return gulp.src('src/favicon/**')
         .pipe(gulp.dest('dist/favicon'));
@@ -54,17 +59,13 @@ function copyCSS() {
         .pipe(gulp.dest('dist/css'));
 }
 
-function copyFavicon() {
-    return gulp.src('favicon.ico')
-        .pipe(gulp.dest('dist/'));
-}
-
 function jsLib() {
     let sourceLib = [
         'src/js/lib/jquery.js',
         'src/js/lib/gsap.js',
         'src/js/lib/ScrollTrigger.js',
         'src/js/lib/anime.min.js',
+        'src/js/lib/jquery.magnify.js',
     ];
     return gulp.src(sourceLib)
         .pipe(concat('bundle.js'))
@@ -101,6 +102,10 @@ function watchJs() {
 function watchImg() {
     gulp.watch('src/img/**/*', gulp.series(copyImg));
 }
+
+// function watchVideo() {
+//     gulp.watch('src/img/**/*', gulp.series(copyVideo));
+// }
 
 function watchFont() {
     gulp.watch('src/fonts/**/**', gulp.series(copyFonts));
@@ -152,6 +157,7 @@ gulp.task('browser-sync', function () {
     gulp.watch('src/html/include/*.html', gulp.series(htmlPage)).on('change', browserSync.reload);
     gulp.watch('src/js/*/*.js', gulp.series(jsLib, jsCommon)).on('change', browserSync.reload);
     gulp.watch('src/img/**/*', gulp.series(copyImg)).on('change', browserSync.reload);
+    // gulp.watch('src/video/*', gulp.series(copyVideo)).on('change', browserSync.reload);
     gulp.watch('src/fonts/**/**', gulp.series(copyFonts)).on('change', browserSync.reload);
     gulp.watch('src/index.html', gulp.series(copyIndex)).on('change', browserSync.reload);
 });
