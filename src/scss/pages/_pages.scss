@@ -467,6 +467,27 @@ section {
               }
             }
 
+            .bar-wrap {
+              position: relative;
+              font-size: 15px;
+              width: 100%;
+              height: 25px;
+              font-weight: 600;
+              border-radius: 10px;
+              background-color: #fff;
+              margin: 10px 0;
+              overflow: hidden;
+
+              .bar {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 0;
+                height: 100%;
+                background-color: $orange;
+              }
+            }
+
             .img-container {
               text-align: center;
 
@@ -677,10 +698,11 @@ section {
 
         .heading {
           font-size: 24px;
+          margin-bottom: 20px;
         }
 
         .year {
-          font-size: 16px;
+          font-size: 20px;
         }
       }
 
@@ -754,5 +776,51 @@ section {
   100% {
     opacity: 1;
     color: white
+  }
+}
+
+
+// magnify
+.magnify-footer {
+  position: static;
+
+  .magnify-button {
+    color: $black;
+
+    .svg-inline-icon {
+      color: $black;
+
+      path {
+        fill: $black;
+      }
+    }
+
+    &.magnify-button-prev {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &.magnify-button-next {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &.magnify-button-zoomIn {
+      position: absolute;
+      bottom: 0;
+      left: calc(50% - 20px);
+      transform: translateX(-50%);
+    }
+
+    &.magnify-button-zoomOut {
+      position: absolute;
+      bottom: 0;
+      left: calc(50% + 20px);
+      transform: translateX(-50%);
+    }
   }
 }
