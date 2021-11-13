@@ -45,8 +45,8 @@ function copyImg() {
 // }
 
 function copyFavicon() {
-    return gulp.src('src/favicon/**')
-        .pipe(gulp.dest('dist/favicon'));
+    return gulp.src('favicon.ico')
+        .pipe(gulp.dest('dist'));
 }
 
 function copyFonts() {
@@ -96,7 +96,7 @@ function watchInclude() {
 }
 
 function watchJs() {
-    gulp.watch('src/js/*/*.js', gulp.series(jsLib, jsCommon));
+    gulp.watch(['src/js/**/*.js','src/js/*.js'], gulp.series(jsLib, jsCommon));
 }
 
 function watchImg() {
@@ -155,7 +155,8 @@ gulp.task('browser-sync', function () {
     gulp.watch('src/scss/**/*.scss', gulp.series(scss)).on('change', browserSync.reload);
     gulp.watch('src/html/pages/*.html', gulp.series(htmlPage)).on('change', browserSync.reload);
     gulp.watch('src/html/include/*.html', gulp.series(htmlPage)).on('change', browserSync.reload);
-    gulp.watch('src/js/*/*.js', gulp.series(jsLib, jsCommon)).on('change', browserSync.reload);
+    gulp.watch('src/js/**/*.js', gulp.series(jsLib)).on('change', browserSync.reload);
+    gulp.watch('src/js/*.js', gulp.series(jsCommon)).on('change', browserSync.reload);
     gulp.watch('src/img/**/*', gulp.series(copyImg)).on('change', browserSync.reload);
     // gulp.watch('src/video/*', gulp.series(copyVideo)).on('change', browserSync.reload);
     gulp.watch('src/fonts/**/**', gulp.series(copyFonts)).on('change', browserSync.reload);
