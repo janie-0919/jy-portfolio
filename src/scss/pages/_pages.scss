@@ -279,8 +279,7 @@ section {
                   width: 4px;
                   height: 4px;
                   position: absolute;
-                  top: 50%;
-                  transform: translateY(-50%);
+                  top: 12px;
                   left: 0;
                   background-color: $primary;
                   border-radius: 50%;
@@ -475,7 +474,7 @@ section {
               font-weight: 600;
               border-radius: 10px;
               background-color: #fff;
-              margin: 10px 0;
+              margin: 10px 0 20px;
               overflow: hidden;
 
               .bar {
@@ -484,7 +483,12 @@ section {
                 top: 0;
                 width: 0;
                 height: 100%;
-                background-color: $orange;
+                color: #fff;
+                line-height: 25px;
+                padding-left: 10px;
+                border-radius: 10px;
+                background-color: $primary;
+                transition: .3s;
               }
             }
 
@@ -671,7 +675,7 @@ section {
               ul {
                 li {
                   font-size: 14px;
-                  line-height: 24px;
+                  line-height: 30px;
                   margin-bottom: 5px;
                 }
               }
@@ -703,6 +707,7 @@ section {
 
         .year {
           font-size: 20px;
+          font-weight: 600;
         }
       }
 
@@ -782,45 +787,48 @@ section {
 
 // magnify
 .magnify-footer {
-  position: static;
+}
 
-  .magnify-button {
+.magnify-button {
+  color: $black;
+
+  .svg-inline-icon {
     color: $black;
 
-    .svg-inline-icon {
-      color: $black;
-
-      path {
-        fill: $black;
-      }
+    path {
+      fill: $black;
     }
+  }
 
-    &.magnify-button-prev {
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-    }
+  &.magnify-button-close {
+    color: $black;
+  }
 
-    &.magnify-button-next {
-      position: absolute;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
-    }
+  &.magnify-button-prev {
+    //position: absolute;
+    //left: 0;
+    //top: 50%;
+    //transform: translateY(-50%);
+  }
 
-    &.magnify-button-zoomIn {
-      position: absolute;
-      bottom: 0;
-      left: calc(50% - 20px);
-      transform: translateX(-50%);
-    }
+  &.magnify-button-next {
+    //position: absolute;
+    //right: 0;
+    //top: 50%;
+    //transform: translateY(-50%);
+  }
 
-    &.magnify-button-zoomOut {
-      position: absolute;
-      bottom: 0;
-      left: calc(50% + 20px);
-      transform: translateX(-50%);
-    }
+  &.magnify-button-zoomIn {
+    //position: absolute;
+    //bottom: 0;
+    //left: calc(50% - 20px);
+    //transform: translateX(-50%);
+  }
+
+  &.magnify-button-zoomOut {
+    //position: absolute;
+    //bottom: 0;
+    //left: calc(50% + 20px);
+    //transform: translateX(-50%);
   }
 }

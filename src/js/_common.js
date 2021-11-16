@@ -217,28 +217,30 @@ front.common = (function () {
               $img.attr('data-magnify',galleryNum);
           });
 
-              // function skillSet() {
-              //     $('.bar-info').each(function () {
-              //         var total = $(this).data("total");
-              //         $(this).css("width", total + "%");
-              //     });
-              //
-              //     $('.percent').each(function () {
-              //         var $this = $(this);
-              //         $({ Counter: 20 }).animate({
-              //             Counter: $this.text()
-              //         }, {
-              //             delay: 0,
-              //             duration: 2000,
-              //             easing: 'swing',
-              //             step: function () {
-              //                 $this.text(Math.ceil(this.Counter) + "%");
-              //             }
-              //         });
-              //     });
-              // }
+          function barSet() {
+              $('.bar').each(function () {
+                  var percent = $(this).data("percent");
+                  $(this).css("width", percent + "%");
+              });
 
-              setTimeout(skillSet, 1000);
+              // $('.percent').each(function () {
+              //     var $this = $(this);
+              //     $({ Counter: 20 }).animate({
+              //         Counter: $this.text()
+              //     }, {
+              //         delay: 0,
+              //         duration: 2000,
+              //         easing: 'swing',
+              //         step: function () {
+              //             $this.text(Math.ceil(this.Counter) + "%");
+              //         }
+              //     });
+              // });
+          }
+
+          barSet();
+
+              // setTimeout(skillSet, 1000);
       });
   };
 
