@@ -746,6 +746,10 @@ section {
             }
 
             .item-body {
+              .desc {
+                padding-left: 0;
+              }
+
               .img-container {
                 a {
                   margin-bottom: 10px;
@@ -784,10 +788,6 @@ section {
   }
 }
 
-
-// magnify
-.magnify-footer {
-}
 
 .magnify-button {
   color: $black;
